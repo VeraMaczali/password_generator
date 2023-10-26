@@ -91,19 +91,19 @@ const characters = [
   "?",
   "/",
 ];
-
 let password1El = document.getElementById("password1-el");
 let password2El = document.getElementById("password2-el");
+const length = document.getElementById("length");
 
 function generate() {
-  let randomPassword1 = "";
-  let randomPassword2 = "";
-  for (let i = 0; i < 16; i++) {
-    let password1 = Math.floor(Math.random() * characters.length);
-    let password2 = Math.floor(Math.random() * characters.length);
-    randomPassword1 += characters[password1];
-    randomPassword2 += characters[password2];
+  let pass1 = "";
+  let pass2 = "";
+  for (let i = 0; i < length.value; i++) {
+    randomPass1 = Math.floor(Math.random() * characters.length);
+    randomPass2 = Math.floor(Math.random() * characters.length);
+    pass1 += characters[randomPass1];
+    pass2 += characters[randomPass2];
   }
-  password1El.textContent = randomPassword1;
-  password2El.textContent = randomPassword2;
+  password1El.textContent = pass1;
+  password2El.textContent = pass2;
 }
